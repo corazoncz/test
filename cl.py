@@ -108,8 +108,8 @@ while True:
                                 except Exception as e:
                                     client.sendText(receiver, str(e))
                             elif "Tob say " in msg.text:
-					                       bctxt = msg.text.replace("Tob say ","")
-					                       client.sendText(msg.to,(bctxt))
+		                  bctxt = msg.text.replace("Tob say ","")
+	                          client.sendText(msg.to,(bctxt))
                             elif 'say:' in msg.text.lower():
                                 try:
                                     isi = msg.text.lower().replace('say:','')
