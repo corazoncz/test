@@ -6,8 +6,8 @@ from googletrans import Translator
 
 
 #client = LineClient()
-client = LineClient(id='EMAIL HERE', passwd='PASSWORD HERE')
-#client = LineClient(authToken='AUTH TOKEN')
+client = LineClient(id='corazoncz1@hotmail.com', passwd='neng14541')
+#client = LineClient(authToken='AUTHTOKEN')
 client.log("Auth Token : " + str(client.authToken))
 
 channel = LineChannel(client)
