@@ -107,9 +107,12 @@ while True:
                                     client.sendText(receiver, x)
                                 except Exception as e:
                                     client.sendText(receiver, str(e))
-                            elif "Tob say " in msg.text:
-		                  bctxt = msg.text.replace("Tob say ","")
-	                          client.sendText(msg.to,(bctxt))
+                            elif "Bc: " in msg.text:
+		                bc = msg.text.replace("Bc: ","")
+		                gid = cl.getGroupIdsJoined()
+		                for i in gid:
+		                    client.sendText(i,"🔒[ข้อความนี้เป็นข้อความอัตโนมัติ]\n\n"+bc+"\n\n👥สนใจติดต่อสอบถาม 📲: line://ti/p/~aec4455")
+		                client.sendText(msg.to,"ส่งข้อความสำเร็จ🎉🎉")
                             elif 'say:' in msg.text.lower():
                                 try:
                                     isi = msg.text.lower().replace('say:','')
